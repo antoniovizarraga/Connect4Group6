@@ -1,7 +1,7 @@
 package connect4game;
 
 public class Game {
-	// Esta función comprueba si el valor introducido está dentro del tablero.
+	// Esta función comprueba si el valor introducido es correcto, devolviendo true en el preciso. De no ser así devolverá false.
 	public static boolean validate(int column, char[][] board){
 		//creamos la variable condition inicializada a true para guardar lo que devolvemos.
 		boolean condition=true;
