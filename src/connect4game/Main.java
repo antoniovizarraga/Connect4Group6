@@ -40,13 +40,13 @@ public class Main {
 			boolean validPlay;
 			int play;
 			do {
-				// display(board);
+				Game.display(board);
 
 				System.out.print("Jugador " + player + ", elija una columna: ");
 				play = sc.nextInt();
 
 				// Valida la jugada.
-				// validPlay = validate(play,board);
+				validPlay = Game.validate(play,board);
 
 			} while (validPlay == false);
 
@@ -60,7 +60,7 @@ public class Main {
 			}
 
 			// Determinamos si hay un ganador.
-			// winner = isWinner(player,board);
+			winner = Game.isWinner(player,board);
 
 			// Cambio de turno
 			if (player == 'R') {
@@ -71,7 +71,7 @@ public class Main {
 
 			turn++;
 		}
-		// display(board);
+		Game.display(board);
 
 		/* Comprueba quién ha ganado. */
 		if (winner) {
@@ -84,19 +84,7 @@ public class Main {
 			System.out.println("Tie game");
 		}
 
-		/*
-		 * Array where the board size is saved and it couldn't be mora than ten
-		 */
-		char[][] board = new char[10][10];
-
-		// initialize array
-		for (int row = 0; row < board.length; row++) {
-			for (int col = 0; col < board[0].length; col++) {
-				board[row][col] = ' ';
-			}
-		}
 		
-		Game.display(board);
 
 	}
 
