@@ -36,19 +36,19 @@ public class Main {
 		 * Multiplicamos la cantidad de filas por columnas ya que ese será la cantidad
 		 * máxima de turnos que puede haber en una partida.
 		 */
-		while (winner == false && turn <= (ROWS * COLUMNS)) {
+		while (!winner && turn <= (ROWS * COLUMNS)) {
 			boolean validPlay;
 			int play;
 			do {
 				Game.display(board);
 
-				System.out.print("Jugador " + player + ", elija una columna: ");
+				System.out.print("Player " + player + ", choose a column: \n" );
 				play = sc.nextInt();
 
 				// Valida la jugada.
 				validPlay = Game.validate(play,board);
 
-			} while (validPlay == false);
+			} while (!validPlay );
 
 			// Bucle en el que meterá la ficha.
 			/* Sustituirá el espacio por la ficha */
@@ -84,7 +84,7 @@ public class Main {
 			System.out.println("Tie game");
 		}
 
-		
+		sc.close();
 
 	}
 
