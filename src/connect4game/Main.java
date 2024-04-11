@@ -39,7 +39,7 @@ public class Main {
 		int play;
 		
 		/*
-		 * Lopp that control all the game, and ends when the board is full or someone
+		 * Lop that control all the game, and ends when the board is full or someone
 		 * connected the four tokens
 		 */
 		while (!winner && turn <= (ROWS * COLUMNS)) {
