@@ -8,10 +8,10 @@ public class Main {
 	private static final int ROWS = 6;
 
 	public static void main(String[] args) {
-		// Objeto Scanner
+		// Scanner Object
 		Scanner sc = new Scanner(System.in);
 
-		// Creamos el tablero del conecta 4.
+		// Array of the boar for the connect 4 game
 		char[][] board = new char[ROWS][COLUMNS];
 
 		// Inicializamos el Array del tablero.
@@ -21,25 +21,32 @@ public class Main {
 			}
 		}
 
-		// Variable que representará los turnos que van pasando
-		// en el transcurso de la partida.
+		/*
+		 * Variable that represent the turn of the players
+		 */
 		int turn = 1;
 
-		// Variable que representará el turno actual del jugador.
+		// Variable to save the player token
 		char player = 'R';
 
-		// Variable que indicará quién ganará.
+		// Variable to know if someone wined
 		boolean winner = false;
-
-		// Bucle en el que se iniciará la partida.
+		
+		// Variable to cobntrol a valid play
+		boolean validPlay;
+		
+		// Variable that save the column where the token is put
+		int play;
+		
 		/*
-		 * Multiplicamos la cantidad de filas por columnas ya que ese será la cantidad
-		 * máxima de turnos que puede haber en una partida.
+		 * Lopp that control all the game, and ends when the board is full or someone
+		 * connected the four tokens
 		 */
 		while (!winner && turn <= (ROWS * COLUMNS)) {
-			boolean validPlay;
-			int play;
+			
+			// A loop that only ends when a play is correct
 			do {
+				// Call to the function that print the board
 				Game.display(board);
 
 				System.out.print("Player " + player + ", choose a column: \n" );
