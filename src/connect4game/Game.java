@@ -11,7 +11,7 @@ public class Game {
 		/*
 		 * Loop where the number at the top of the board is printed
 		 */
-		for (int col = 0; col < board.length; col++) {
+		for (int col = 0; col < board[0].length; col++) {
 			/*
 			 * Print the number with a white space and if its zero add an extra white space
 			 */

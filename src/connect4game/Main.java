@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 
-	private static final int COLUMNS = 6;
+	private static final int COLUMNS = 7;
 	private static final int ROWS = 6;
 
 	public static void main(String[] args) {
